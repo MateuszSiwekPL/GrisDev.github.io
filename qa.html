@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <style>
+    body {
+      background-color: #191919; /* Dark shade of black */
+      color: #ffffff; /* White font color */
+      font-family: "Verdana", sans-serif; /* Sharper font */
+      margin: 0;
+      padding: 0;
+    }
+    
+    #header {
+      text-align: center;
+      padding: 30px 0;
+    }
+    
+    #header h1 {
+      font-size: 60px; /* Big font size */
+      margin: 0;
+    }
+    
+    #header a {
+      color: #ffffff; /* White font color */
+      text-decoration: none;
+    }
+
+    #info {
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: "Verdana", sans-serif;
+      font-weight: bold;
+    }
+    
+    #options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 50px; /* Adjust spacing */
+      border-top: 2px solid #363636; /* Line separator */
+      border-bottom: 2px solid #363636; /* Line separator */
+   
+    }
+    
+    
+    .option {
+      background-color: #363636; /* Dark shade of grey */
+      color: #ffffff; /* White font color */
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-align: center;
+      width: 200px;
+      cursor: pointer; /* Change cursor to indicate clickability */
+      transition: opacity 0.5s; /* Slower opacity transition */
+      
+    }
+    
+    .option:hover {
+
+      opacity: 1; /* Full opacity on hover */
+    }
+        
+    .adjusted {
+    text-align: justify;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 1.5;
+    font-weight: bold;
+    }
+    .bold-centered {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding-top: 5px;
+    }
+    .centered {
+      text-align: center;
+      line-height: 1.5;
+      font-weight: bold;
+      
+    }
+    
+    h3 {
+      margin: 0;
+    }
+    
+    a {
+      color: #ffffff; /* White font color */
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: none; /* Remove underline on hover */
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const options = document.querySelectorAll(".option");
+
+      options.forEach(option => {
+        option.addEventListener("mouseover", function() {
+          options.forEach(otherOption => {
+            if (otherOption !== this) {
+              otherOption.style.opacity = "0.5";
+            }
+          });
+        });
+
+        option.addEventListener("mouseout", function() {
+          options.forEach(otherOption => {
+            if (otherOption !== this) {
+              otherOption.style.opacity = "1";
+            }
+          });
+        });
+
+        option.addEventListener("click", function() {
+          window.location.href = this.dataset.link; // Redirect to the specified link
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="info">
+    <p>Name: Mateusz Siwek</p>
+    <p>Email: mateusz.siwek.pl@gmail.com</p>
+    <p>Phone Number: 669 639 476</p>
+    <p>Address: Podwórcowa 9/26, Wrocław</p>
+    <p>Date of Birth: 10.06.1999</p>
+    </div>
+  <div id="header">
+    <h1><a href="GrisDev.html">GrisDev</a></h1>
+  </div>
+  <div id="options">
+    <div class="option" data-link="generalInfo.html">
+      <h3>General Info</h3>
+    </div>
+    <div class="option" data-link="about.html">
+      <h3>About Me</h3>
+    </div>
+    <div class="option" data-link="skills.html" >
+      <h3>My Skills</h3>
+    </div>
+    <div class="option" data-link="qa.html" style="border-right-style: ridge; border-right-color: white; border-right-width: 3px;border-left-style:groove; border-left-color: white; border-left-width: 3px;">
+      <h3>Q&A</h3>
+    </div>
+    <div class="option" data-link="cv.html">
+      <h3>CV</h3>
+    </div>
+  </div>
+  <div>
+    <p class= "adjusted" style="padding-top: 50px;">
+        What is my strong suit? <br>
+        Logical thinking and problem solving ability. <br>
+        <br>
+        What is my weakness? <br>
+        Right now I’m working on my typing speed and learning Visual Studio shortcuts because I’m somewhat slow at writing code. <br>
+        <br>
+        How I found out about The Knights of Unity? <br>
+        While searching for information about bézier curves I found blog entry for Little Racer on The Knights of Unity, blog of knowledge site. Then I started reading rest of the blog and found out Your company is based in Wroclaw where I live. <br>
+        <br>
+        What is my favorite game/s? <br>
+        If I had to choose it would be Witcher 3 or Skyrim but lately I have been playing a lot of good games that I can’t overlook such as: Chorus, Ori (1 and 2), Pillars of Eternity and Final Fantasy XIV. <br>
+        <br>
+        What I like to do in my free time? <br>
+        I like to work on my games/learn about game development, play games, exercise/swim and spend time with family and friends. <br>
+        <br>
+        What do I like the best in game development? <br>
+        Solving problems, creating creative game mechanics and the feeling of accomplishment after finishing a project. <br>
+        
+    </p>
+  </div>
+   

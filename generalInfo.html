@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <style>
+    body {
+      background-color: #191919; /* Dark shade of black */
+      color: #ffffff; /* White font color */
+      font-family: "Verdana", sans-serif; /* Sharper font */
+      margin: 0;
+      padding: 0;
+    }
+    
+    #header {
+      text-align: center;
+      padding: 30px 0;
+    }
+    
+    #header h1 {
+      font-size: 60px; /* Big font size */
+      margin: 0;
+    }
+    
+    #header a {
+      color: #ffffff; /* White font color */
+      text-decoration: none;
+    }
+
+    #info {
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: "Verdana", sans-serif;
+      font-weight: bold;
+    }
+    
+    #options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 50px; /* Adjust spacing */
+      border-top: 2px solid #363636; /* Line separator */
+      border-bottom: 2px solid #363636; /* Line separator */
+   
+    }
+    
+    
+    .option {
+      background-color: #363636; /* Dark shade of grey */
+      color: #ffffff; /* White font color */
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-align: center;
+      width: 200px;
+      cursor: pointer; /* Change cursor to indicate clickability */
+      transition: opacity 0.5s; /* Slower opacity transition */
+      
+    }
+    
+    .option:hover {
+
+      opacity: 1; /* Full opacity on hover */
+    }
+        
+    .adjusted {
+    text-align: justify;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 1.5;
+    font-weight: bold;
+    }
+    .bold-centered {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding-top: 0px;
+    }
+    .centered {
+      text-align: center;
+      line-height: 1.5;
+      font-weight: bold;
+      
+    }
+    
+    h3 {
+      margin: 0;
+    }
+    
+    a {
+      color: #ffffff; /* White font color */
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: none; /* Remove underline on hover */
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const options = document.querySelectorAll(".option");
+
+      options.forEach(option => {
+        option.addEventListener("mouseover", function() {
+          options.forEach(otherOption => {
+            if (otherOption !== this) {
+              otherOption.style.opacity = "0.5";
+            }
+          });
+        });
+
+        option.addEventListener("mouseout", function() {
+          options.forEach(otherOption => {
+            if (otherOption !== this) {
+              otherOption.style.opacity = "1";
+            }
+          });
+        });
+
+        option.addEventListener("click", function() {
+          window.location.href = this.dataset.link; // Redirect to the specified link
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="info">
+    <p>Name: Mateusz Siwek</p>
+    <p>Email: mateusz.siwek.pl@gmail.com</p>
+    <p>Phone Number: 669 639 476</p>
+    <p>Address: Podwórcowa 9/26, Wrocław</p>
+    <p>Date of Birth: 10.06.1999</p>
+    </div>
+  <div id="header">
+    <h1><a href="GrisDev.html">GrisDev</a></h1>
+  </div>
+  <div id="options">
+    <div class="option" data-link="generalInfo.html" style="border-right-style: ridge; border-right-color: white; border-right-width: 3px;border-left-style:groove; border-left-color: white; border-left-width: 3px;">
+      <h3>General Info</h3>
+    </div>
+    <div class="option" data-link="about.html">
+      <h3>About Me</h3>
+    </div>
+    <div class="option" data-link="skills.html">
+      <h3>My Skills</h3>
+    </div>
+    <div class="option" data-link="qa.html">
+      <h3>Q&A</h3>
+    </div>
+    <div class="option" data-link="cv.html">
+      <h3>CV</h3>
+    </div>
+  </div>
+  <div>
+    <p class="bold-centered">Education</p>
+    <p class="adjusted" style="padding-left: 25%;">
+      Master studies - Wrocław University of Technology, major: Health and Safety (expected graduation: July 2023) <br>
+      Engineering studies - Wrocław University of Technology, major: Environmental Engineering <br>
+      High School - No. VII them. M. Copernicus in Czestochowa: mathematic, physic, computer science <br>
+    </p>
+    
+    <p class="bold-centered">Languages</p>
+    <p class="centered">
+      Polish - Native <br>
+      English – C1 <br>
+      German – A2 <br>
+      French – A1
+    </p>
+    <p class="bold-centered">Programming Languages</p>
+    <p class="centered">
+      C# - Intermediate <br>
+      HTML – Beginner+ <br>
+      CSS – Beginner+ <br>
+      JavaScript – Beginner <br>
+      C – Beginner
+    </p>
+    <p class="bold-centered">Programs/Services</p>
+    <p class="centered">
+      Unity – Intermediate <br>
+      Autocad – Intermediate <br>
+      Word, Excel, PowerPoint – Intermediate <br>
+      Git – Beginner <br>
+      Inkscape – Beginner <br>
+      Blender – Beginner
+      </p>
+  </div>
+   

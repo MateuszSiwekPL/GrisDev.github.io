@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Showcase</title>
+  <style>
+    body {
+      background-color: #222222;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+    }
+
+    #left-section {
+      width: 200px;
+      background-color: #333333;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      overflow-y: auto;
+      padding: 10px;
+      text-align:center;
+      
+      padding-top: 20%;
+    }
+
+    #left-section .project-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    #left-section .project-name:hover {
+      color: black;
+    }
+
+    
+
+    #right-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    #header {
+      font-size: 60px;
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 5px solid black; 
+    }
+
+    #header a {
+      color: #ffffff; 
+      text-decoration: none;
+    }
+
+    .project-field {
+      margin-bottom: 40px;
+    }
+
+    .project-name {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .bulleted-list {
+      margin-left: 20%;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+
+    .video-wrapper {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .adjusted-text {
+      text-align: justify;
+      margin-bottom: 20px;
+      font-weight: bold;
+      margin-left: 20%;
+      margin-right: 20%;
+      line-height: 1.5;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const projectNames = Array.from(document.querySelectorAll("#left-section .project-name"));
+      const projectFields = Array.from(document.querySelectorAll(".project-field"));
+
+      function scrollToProject(index) {
+        if (index < projectFields.length) {
+          projectFields[index].scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      projectNames.forEach(function(projectName, index) {
+        projectName.addEventListener("click", function() {
+          projectNames.forEach(function(name) {
+            name.classList.remove("active");
+          });
+          projectName.classList.add("active");
+          scrollToProject(index);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div id="left-section">
+      <div class="project-name">Fingers Testing</div>
+      <div class="project-name">Gravi Slime</div>
+      <div class="project-name">Ball POP</div>
+      <div class="project-name">Neon Space</div>
+      <div class="project-name">Skill Diff</div>
+    </div>
+    <div id="right-section">
+      <div id="header"><a href="GrisDev.html">GrisDev</a></div>
+
+        <div class="project-field" style="padding-top: 20px;">
+        <div class="project-name" style="font-size: 35px;">Fingers Testing</div>
+        <ul class="bulleted-list"  style="list-style-type:square">
+          <li>Platform: Mobile</li>
+          <li>Available on: Android (Google Play Store)</li>
+          <li>Genre: Skill Game</li>
+          <li>In Game Services: Ads (Banner, Interstitial)</li>
+          <li>Link: </li>
+        </ul>
+        <div class="video-wrapper">
+            <iframe width="853" height="505"
+            src="https://www.youtube.com/embed/ZM7wgEDfrYU">
+            </iframe>
+        </div>
+        <div class="adjusted-text">Fingers Testing was my firs available to download project. It’s made of 5 minigames that will test players: reaction time, speed, accuracy, endurance and sliding speed. At first I was making it for learning purposes but later decided to release it on Google Play Store because I wanted to start making my portfolio. The development of Fingers Testing allowed me to gain practical experience in various aspects of game development, including programming, design, and testing. I learned basics of working in Unity, got familiar with its interface, functions and workflow. I got to practice my C# skills and learn how programing works in Unity. In addition, I honed my testing skills by designing and conducting tests to ensure the game's functionality. <br> <br> What I learned during development:</div>
+        <div style="padding-bottom: 20px; border-bottom: 3px solid black;">
+        <ul class="bulleted-list">
+            <li>RayCasting, Touch Inputs – for detecting where and what user is touching on the screen.</li>
+            <li>Instantiating – used for spawning targets in some of the minigames.</li>
+            <li>Creating and managing UI – like buttons or text. .</li>
+            <li>Working with TextMeshPro. .</li>
+            <li>Implementing basic save system with PlayerPrefs. .</li>
+            <li>Implementing Unity ads.</li>
+            <li>Building finished project.</li>
+            <li>Releasing project on Google Play Store.</li>
+            
+        </ul>
+        </div>
+        </div>
+
+      <div class="project-field" style="padding-top: 20px;">
+        <div class="project-name" style="font-size: 35px;">Gravi Slime</div>
+        <ul class="bulleted-list"  style="list-style-type:square">
+            <li>Platform: Mobile</li>
+            <li>Available on: Android (Google Play Store)</li>
+            <li>Genre: Endless Runner</li>
+            <li>In Game Services: Ads (Rewarded), IAP</li>
+            <li>Link: </li>
+          </ul>
+          <div class="video-wrapper">
+              <iframe width="853" height="505"
+              src="https://www.youtube.com/embed/7ra0BAZjYK0">
+              </iframe>
+          </div>
+          <div class="adjusted-text">Gravi Slime was my second released game. It’s an endless runner where by touching the screen, player can change gravity and save slime from hitting spikes and walls. Game contains 20 pre-made level parts that will spawn randomly, so that every try will be different. I became adept at designing and implementing gameplay mechanics, such as the gravity manipulation system for the slime character, level generation, and score tracking. This allowed me to enhance my problem-solving abilities and develop creative solutions to challenges encountered during development. I created levels using Unity grid system and assets from Unity Asset Store. I also practiced performance optimalization using Unity profiler. <br> <br> What I learned during development:</div>
+          <div style="padding-bottom: 20px; border-bottom: 3px solid black;">
+          <ul class="bulleted-list">
+            <li>Unity 2D physics engine – colliders, rigidbody etc. </li>
+            <li>Using Unity grid system</li>
+            <li>Working with sound manager</li>
+            <li>Creating animations and their behavior</li>
+            <li>Implementing IAP buttons and connecting products to Google Play Console. </li>
+            <li>Implementing rewarded ads</li>
+            <li>Creating skin selection system</li>
+            <li>Creating prefabs</li>
+          </ul>
+          </div>
+      </div>
+
+      <div class="project-field"  style="padding-top: 20px;">
+        <div class="project-name" style="font-size: 35px;">Ball POP</div>
+        <ul class="bulleted-list"  style="list-style-type:square">
+            <li>Platform: Mobile</li>
+            <li>Available on: Android (Google Play Store)</li>
+            <li>Genre: Color-matching Puzzle</li>
+            <li>In Game Services: IAP</li>
+            <li>Link: </li>
+          </ul>
+          <div class="video-wrapper">
+              <iframe width="853" height="505"
+              src="https://www.youtube.com/embed/is1yO7JCYqs">
+              </iframe>
+          </div>
+          <div class="adjusted-text">Ball POP was third project that I finished and published. The goal of the game is gaining set amount of points by clicking connected balls with the same color – the more balls of the same color are connected and “POP-ed” the more points player gets. Balls are not set in place so player has to strategize to win. Whole Game is a variation of “Match 3” genre, while using gravity and collisions. Ball POP contains 5 level designs, random ball placements and score system that changes based on stage so that you are able to play it infinitely. One of the skills I learned from Ball POP was the importance of balancing game difficulty and maintaining player engagement that I tested by sharing the game with my friends and gaining their feedback. Through testing and balancing, I optimized the game's levels to ensure a smooth progression curve, gradually increasing the challenge while keeping players rewarded. This project was meant to mainly teach me creating engaging gameplay loops, implementing user feedback and designing intuitive interface. It also helped me practice creative solutions for programming gameplay mechanics. <br> <br> What I learned during development:</div>
+          <div style="padding-bottom: 20px; border-bottom: 3px solid black;">
+          <ul class="bulleted-list">
+            <li>Object pulling – for balls spawning</li>
+            <li>Creating simple 2D game assets – Inkscape</li>
+            <li>Using good programing practices</li>
+            <li>Keeping my code clean and easily readable</li>
+            <li>Implementing user feedback</li>
+          </ul>
+          </div>
+      </div>
+
+      <div class="project-field"  style="padding-top: 20px;">
+        <div class="project-name"  style="font-size: 35px;">Neon Space</div>
+        <ul class="bulleted-list"  style="list-style-type:square">
+            <li>Platform: Mobile</li>
+            <li>Available on: Android (Google Play Store)</li>
+            <li>Genre: Space Shooter, Survivor</li>
+            <li>In Game Services: Ads (Rewarded), IAP</li>
+            <li>Link: </li>
+          </ul>
+          <div class="video-wrapper">
+              <iframe width="853" height="505"
+              src="https://www.youtube.com/embed/sjSRwGqxJyk">
+              </iframe>
+          </div>
+          <div class="adjusted-text">Neon Space is my latest mobile game that I developed. It’s based on Vampire Survivors game mechanics such as: starting from zero on death, upgrading and gaining new weapons by gaining levels, power up system based on in game currency and having big numbers of enemies coming at player at all times. Process of creating 8 individual weapons helped me practice creating mechanics using different approaches (list below). Optimalization was a big part of development because of large number of objects on screen, for that I used Unity profiler and some of code optimalization skills that I was learning during this time. Because of that I polished my skills concerning object pooling and implemented coroutines. I created all the graphics (apart from some UI elements that were Unity Store assets) in Inkscape and used Unity for animations. Neon Space was my biggest project at the time but thanks to it I learned many valuable skills and enhance already obtained. <br> <br> What I learned during development:</div>
+          <div style="padding-bottom: 20px; border-bottom: 3px solid black;">
+          <ul class="bulleted-list">
+            <li>Coroutines</li>
+            <li>Creating animations using Unity</li>
+            <li>Vectors – distance, move towards etc. </li>
+            <li>Line renderer – for “taser” weapon</li>
+            <li>Using time class</li>
+            <li>Creating leveling/upgrade system</li>
+            <li>Creating in game currency </li>
+            <li>Using Unity post processing asset</li>
+          </ul>
+          </div>
+      </div>
+
+      <div class="project-field"  style="padding-top: 20px;">
+        <div class="project-name" style="font-size: 35px;">Skill Diff (work in progress)</div>
+        <ul class="bulleted-list"  style="list-style-type:square">
+            <li>Platform: Pc</li>
+            <li>Available on: Steam</li>
+            <li>Genre: FPS, Parkour</li>
+            <li>In Game Services: Multiplayer, Skin Shop</li>
+            <li>Link: </li>
+          </ul>
+          
+          <div class="adjusted-text">Right now I’m working on my first PC game in 3D environment. It’s a multiplayer FPS with high speed movement containing: wall running, double jumping, Dashing and grappling hook. Shooting is based on one bullet reload mechanic (think CS AWP). God Speed should be released by the end of July 2023. <br> <br> What I learned or plan to learn during development (apart from previously obtained skills):</div>
+          <div style="padding-bottom: 20px; border-bottom: 3px solid black;">
+          <ul class="bulleted-list">
+            <li>Working in 3D environment</li>
+            <li>Working on PC game</li>
+            <li>Implementing networking concepts - client-server architecture, data synchronization etc. </li>
+            <li>Creating first person movement</li>
+            <li>Creating state machine </li>
+            <li>Inheritance</li>
+            <li>Polymorphism </li>
+            <li>Overriding </li>
+            <li>Interfaces</li>
+            <li>Singletons </li>
+            <li>Using Unity event system</li>
+            <li>Implementing save system using JSON</li>
+            <li>Working with Steam platform to upload finished project</li>
+          </ul>
+          </div>
+      </div>
+
+

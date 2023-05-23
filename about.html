@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <style>
+    body {
+      background-color: #191919; 
+      color: #ffffff; 
+      font-family: "Verdana", sans-serif; 
+      margin: 0;
+      padding: 0;
+    }
+    
+    #header {
+      text-align: center;
+      padding: 30px 0;
+    }
+    
+    #header h1 {
+      font-size: 60px; 
+      margin: 0;
+    }
+    
+    #header a {
+      color: #ffffff; 
+      text-decoration: none;
+    }
+
+    #info {
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: "Verdana", sans-serif;
+      font-weight: bold;
+    }
+    
+    #options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 50px; 
+      border-top: 2px solid #363636; 
+      border-bottom: 2px solid #363636; 
+   
+    }
+    
+    
+    .option {
+      background-color: #363636; 
+      color: #ffffff; 
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-align: center;
+      width: 200px;
+      cursor: pointer; 
+      transition: opacity 0.5s; 
+      
+    }
+    
+    .option:hover {
+
+      opacity: 1; /* Full opacity on hover */
+    }
+        
+    .adjusted {
+    text-align: justify;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 1.5;
+    font-weight: bold;
+    }
+    .bold-centered {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding-top: 5px;
+
+    }
+    .centered {
+      text-align: center;
+      line-height: 1.5;
+      font-weight: bold;
+      
+    }
+    
+    h3 {
+      margin: 0;
+    }
+    
+    a {
+      color: #ffffff; /* White font color */
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: none; /* Remove underline on hover */
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const options = document.querySelectorAll(".option");
+
+      options.forEach(option => {
+        option.addEventListener("mouseover", function() {
+          options.forEach(otherOption => {
+            if (otherOption !== this) {
+              otherOption.style.opacity = "0.5";
+            }
+          });
+        });
+
+        option.addEventListener("mouseout", function() {
+          options.forEach(otherOption => {
+            if (otherOption !== this) {
+              otherOption.style.opacity = "1";
+            }
+          });
+        });
+
+        option.addEventListener("click", function() {
+          window.location.href = this.dataset.link; // Redirect to the specified link
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="info">
+    <p>Name: Mateusz Siwek</p>
+    <p>Email: mateusz.siwek.pl@gmail.com</p>
+    <p>Phone Number: 669 639 476</p>
+    <p>Address: Podwórcowa 9/26, Wrocław</p>
+    <p>Date of Birth: 10.06.1999</p>
+    </div>
+  <div id="header">
+    <h1><a href="GrisDev.html">GrisDev</a></h1>
+  </div>
+  <div id="options">
+    <div class="option" data-link="generalInfo.html">
+      <h3>General Info</h3>
+    </div>
+    <div class="option" data-link="about.html" style="border-right-style: ridge; border-right-color: white; border-right-width: 3px;border-left-style:groove; border-left-color: white; border-left-width: 3px;">
+      <h3>About Me</h3>
+    </div>
+    <div class="option" data-link="skills.html">
+      <h3>My Skills</h3>
+    </div>
+    <div class="option" data-link="qa.html">
+      <h3>Q&A</h3>
+    </div>
+    <div class="option" data-link="cv.html">
+      <h3>CV</h3>
+    </div>
+  </div>
+  <div>
+    <p class="adjusted" style="padding-top: 50px;">I always had keen interest in game industry. When I was a kid I always told everyone that I will become game developer when I grow up. Those plans changed when my parents pushed me to study Environmental Engineering because it was our family profession. After completing those studies, 
+      I decided that I don’t have enough interest in this field to continue studying it, so I started Master studies in Health and Safety. Those were better suit for me but I still felt like I want to do something different in life. <br> <br> During this time I picked programming as a hobby. At first I was learning HTML, CSS and JavaScript by creating some fun and basic sites and applications. Then I started learning C# and Unity, to check if game development still interested me. <br> <br> I realized that, this is what I wanted to do in life so I started looking at game dev more seriously than just as a hobby. I spend roughly half of my free time reading, watching and learning everything about: Unity, C# and game development. I used Unity Learn for courses on programming and Unity tutorials. I also loved watching YouTube videos about different game mechanics and how to create them. <br> <br> Half a year ago I started making my own games. Right now I developed and published 4 mobile games and I’m currently creating PC multiplayer FPS game that hopefully will be released by the end of July. During this month I will also finish my Master Studies and will be able to finally start looking for a job or internship in game development that till now was only a hobby and dream. 
+      </p>
+      
+  </div>
+   
